@@ -1,0 +1,97 @@
+:root {
+    --main-bg: rgb(224, 224, 224);
+    --main-border: rgb(96, 96, 96);
+    --selected-bg: rgb(192, 192, 192);
+    --selected-border: rgb(32, 32, 32);
+}
+
+* {
+    font-family: monospace;
+}
+
+.calc {
+    width: 600px;
+}
+
+.calc-input {
+    width: calc(100% - 30px);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+
+    background-color: var(--main-bg);
+    border: 1px solid var(--main-border);
+
+    text-align: right;
+    font-size: 24px;
+    font-weight: 700;
+}
+.calc-input:focus {
+    padding: 4px 9px;
+    border: 2px solid var(--selected-border);
+    background-color: var(--selected-bg);
+    outline: none;
+}
+
+.calc-panels {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.calc-panels__item {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+[class*="calc-panels__item-button"] {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid var(--main-border);
+    background-color: var(--main-bg);
+
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+[class*="calc-panels__item-button"]:hover {
+    padding: 4px;
+    border: 2px solid var(--selected-border);
+    background-color: var(--selected-bg);
+}
+
+.calc-panels__item-button--C {
+    background-color: rgb(255, 192, 192);
+}
+.calc-panels__item-button--C:hover {
+    background-color: rgb(192, 96, 96);
+}
+
+[class="calc-panels__item-button--."], [class="calc-panels__item-button--("], [class="calc-panels__item-button--)"], [class="calc-panels__item-button--+"], [class="calc-panels__item-button---"], [class="calc-panels__item-button--*"], [class="calc-panels__item-button--/"] {
+    background-color: rgb(192, 192, 255);
+}
+[class="calc-panels__item-button--."]:hover, [class="calc-panels__item-button--("]:hover, [class="calc-panels__item-button--)"]:hover, [class="calc-panels__item-button--+"]:hover, [class="calc-panels__item-button---"]:hover, [class="calc-panels__item-button--*"]:hover, [class="calc-panels__item-button--/"]:hover {
+    background-color: rgb(96, 96, 192);
+}
+
+[class="calc-panels__item-button--="], [class="calc-panels__item-button--%"] {
+    background-color: rgb(192, 255, 192);
+}
+[class="calc-panels__item-button--="]:hover, [class="calc-panels__item-button--%"]:hover {
+    background-color: rgb(96, 192, 96);
+}
+
+.calc-panels__item-button--0, .calc-panels__item-button--1, .calc-panels__item-button--2, .calc-panels__item-button--3, .calc-panels__item-button--4, .calc-panels__item-button--5, .calc-panels__item-button--6, .calc-panels__item-button--7, .calc-panels__item-button--8, .calc-panels__item-button--9, .calc-panels__item-button--π, .calc-panels__item-button--τ, .calc-panels__item-button--e, .calc-panels__item-button--φ {
+    background-color: rgb(192, 192, 192);
+}
+.calc-panels__item-button--0:hover, .calc-panels__item-button--1:hover, .calc-panels__item-button--2:hover, .calc-panels__item-button--3:hover, .calc-panels__item-button--4:hover, .calc-panels__item-button--5:hover, .calc-panels__item-button--6:hover, .calc-panels__item-button--7:hover, .calc-panels__item-button--8:hover, .calc-panels__item-button--9:hover, .calc-panels__item-button--π:hover, .calc-panels__item-button--τ:hover, .calc-panels__item-button--e:hover, .calc-panels__item-button--φ:hover {
+    background-color: rgb(128, 128, 128);
+}
